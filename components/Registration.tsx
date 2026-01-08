@@ -20,7 +20,7 @@ const Registration: React.FC = () => {
         <div className="max-w-4xl mx-auto bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Réservez votre place</h2>
-            <p className="text-slate-600">Les places sont limitées à La Cristallerie. Demandez votre invitation dès aujourd'hui.</p>
+            <p className="text-slate-600">Les places sont limitées au Morning Bourse. Demandez votre invitation dès aujourd'hui.</p>
           </div>
 
           <div className="w-full flex justify-center">
