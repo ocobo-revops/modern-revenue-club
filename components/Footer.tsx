@@ -9,16 +9,12 @@ const Footer: React.FC = () => {
             <div className="text-white font-bold text-xl mb-2 tracking-wider">MODERN REVENUE CLUB</div>
             <p className="text-sm opacity-70">Revenue Forward 2026</p>
           </div>
-          
+
           <div className="flex space-x-8 text-sm font-medium">
-            <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>
-            <a href="#" className="hover:text-white transition-colors">Conditions d'utilisation</a>
-            <a href="#" className="hover:text-white transition-colors">Contact</a>
+            <p>© 2025 Ocobo. Tous droits réservés.</p>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-slate-800 text-center md:text-left text-xs opacity-60">
-          <p>© 2025 Ocobo. Tous droits réservés.</p>
-        </div>
+
       </div>
     </footer>
   );

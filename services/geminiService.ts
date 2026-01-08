@@ -40,7 +40,7 @@ export const generateEventAnswer = async (userQuestion: string): Promise<string>
         systemInstruction: EVENT_CONTEXT,
       }
     });
-    
+
     return response.text || "Je vous prie de m'excuser, je ne peux pas générer de réponse pour le moment.";
   } catch (error) {
     console.error("Error communicating with Gemini:", error);

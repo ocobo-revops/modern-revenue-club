@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Location: React.FC = () => {
@@ -6,19 +7,11 @@ const Location: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="bg-white/60 backdrop-blur-xl rounded-[3rem] p-8 md:p-12 border border-white shadow-xl">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2">
+            <div className="sha-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 group">
-                {/* 
-                   NOTE: L'URL précédente ne s'affichait pas à cause des restrictions de sécurité du serveur d'origine (Hotlink Protection).
-                   J'ai placé une image de style similaire (Atrium Industriel) qui fonctionne.
-                   
-                   Pour utiliser votre photo spécifique :
-                   1. Hébergez-la sur un site public (ex: Imgur, votre serveur).
-                   2. Remplacez l'URL ci-dessous par le lien direct de votre image.
-                */}
                 <img 
-                  src="https://27107933.fs1.hubspotusercontent-eu1.net/hubfs/27107933/6603f76ae4576a934e8ee2bd_LH_HEXA_20240320_180340770%20(1).jpg" 
-                  alt="La Cristallerie Paris - Atrium" 
+                  src="https://27107933.fs1.hubspotusercontent-eu1.net/hubfs/27107933/Morning%20Bourse.avif" 
+                  alt="Morning Bourse - Paris" 
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -29,10 +22,10 @@ const Location: React.FC = () => {
               <div className="inline-block mb-4 px-3 py-1 rounded-full bg-slate-100 border border-slate-200">
                 <span className="text-slate-500 text-xs font-bold uppercase tracking-wider">Le Lieu</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">La Cristallerie</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Morning Bourse</h2>
               <div className="space-y-8 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  Accueilli dans le cadre prestigieux de La Cristallerie, symbole de l'élégance française et du patrimoine industriel. Un cadre parfait pour des conversations avant-gardistes.
+                  Situé au cœur du quartier historique de la finance, face au majestueux Palais Brongniart, Morning Bourse nous accueille dans un cadre prestigieux et inspirant. Un lieu iconique, alliant héritage architectural et modernité, pour dessiner ensemble les contours du revenu de demain.
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -45,7 +38,7 @@ const Location: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900 text-sm uppercase tracking-wide mb-1">Adresse</h4>
-                      <p className="text-sm">12 Rue Martel<br/>75010 Paris</p>
+                      <p className="text-sm">4 Pl. de la Bourse<br/>75002 Paris</p>
                     </div>
                   </div>
 
@@ -65,7 +58,7 @@ const Location: React.FC = () => {
 
               <div className="mt-10">
                 <a 
-                  href="https://maps.app.goo.gl/x2DTLXrRe6eRez8o9" 
+                  href="https://maps.app.goo.gl/oC8f79GkaKof4rjv9" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-ocobo-primary font-bold hover:text-[#d67a65] transition-colors group"
