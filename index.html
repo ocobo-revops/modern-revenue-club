@@ -1,72 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Revenue Forward 2026 - Modern Revenue Club</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              ocobo: {
-                primary: '#FE9C87', // Ocobo Red
-                'primary-hover': '#e48c79', // Darker shade for hover
-                dark: '#0f172a',
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            animation: {
-              'fade-in-up': 'fadeInUp 0.5s ease-out',
-            },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revenue Forward 2026 - Modern Revenue Club</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <link rel="shortcut icon" href="/favicons/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocobo: {
+              primary: '#FE9C87', // Ocobo Red
+              'primary-hover': '#e48c79', // Darker shade for hover
+              dark: '#0f172a',
             }
           },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.5s ease-out',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
         },
-      }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-      body { font-family: 'Inter', sans-serif; }
-      /* Smooth scrolling with offset for fixed navbar */
-      html { 
-        scroll-behavior: smooth; 
-        scroll-padding-top: 100px;
-      }
-      
-      /* Modern Revenue Club Mesh Gradient */
-      .mesh-gradient {
-        background-color: #ffffff;
-        background-image: 
-          radial-gradient(at 0% 0%, rgba(255, 154, 158, 0.6) 0px, transparent 50%),
-          radial-gradient(at 100% 0%, rgba(253, 223, 101, 0.5) 0px, transparent 50%),
-          radial-gradient(at 0% 100%, rgba(132, 250, 176, 0.5) 0px, transparent 50%),
-          radial-gradient(at 100% 100%, rgba(143, 211, 244, 0.5) 0px, transparent 50%);
-        background-attachment: fixed;
-        background-size: cover;
-      }
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
 
-      /* Text Mesh Gradient - Increased opacity for visibility */
-      .text-mesh-color {
-        background-color: #FE9C87;
-        background-image: 
-          radial-gradient(at 0% 0%, rgba(255, 154, 158, 1) 0px, transparent 50%),
-          radial-gradient(at 100% 0%, rgba(253, 223, 101, 1) 0px, transparent 50%),
-          radial-gradient(at 0% 100%, rgba(132, 250, 176, 1) 0px, transparent 50%),
-          radial-gradient(at 100% 100%, rgba(143, 211, 244, 1) 0px, transparent 50%);
-        background-size: 150% 150%;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-    </style>
+    /* Smooth scrolling with offset for fixed navbar */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    /* Modern Revenue Club Mesh Gradient */
+    .mesh-gradient {
+      background-color: #ffffff;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(255, 154, 158, 0.6) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(253, 223, 101, 0.5) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(132, 250, 176, 0.5) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(143, 211, 244, 0.5) 0px, transparent 50%);
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* Text Mesh Gradient - Increased opacity for visibility */
+    .text-mesh-color {
+      background-color: #FE9C87;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(255, 154, 158, 1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(253, 223, 101, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(132, 250, 176, 1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(143, 211, 244, 1) 0px, transparent 50%);
+      background-size: 150% 150%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -77,11 +87,13 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
