@@ -15,6 +15,91 @@ const EventDetail: React.FC<EventDetailProps> = ({
 	onHome,
 	onJoinClick,
 }) => {
+	if (eventId === "diner-mrc-juillet-2026") {
+		return (
+			<div className="animate-fade-in pb-32">
+				<div className="relative pt-24 pb-12 overflow-hidden">
+					<div className="container mx-auto px-6 relative z-10">
+						<button
+							onClick={onBack}
+							className="flex items-center gap-2 text-slate-400 hover:text-slate-900 font-bold text-[10px] uppercase tracking-[0.2em] transition-colors mb-8"
+						>
+							<span>←</span> Retour aux événements
+						</button>
+						<div className="max-w-4xl">
+							<div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-ocobo-primary text-white text-[10px] font-black uppercase tracking-[0.2em]">
+								À venir · 21 Juillet 2026
+							</div>
+							<h1 className="text-6xl md:text-8xl font-extrabold text-slate-900 mb-6 tracking-tighter leading-none">
+								Dîner MRC
+							</h1>
+							<p className="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed max-w-3xl mb-4">
+								Un dîner intimiste réunissant un cercle restreint de leaders du Revenue.
+							</p>
+							<button
+								onClick={onHome}
+								className="text-ocobo-primary font-black text-xs uppercase tracking-widest hover:underline transition-all"
+							>
+								En savoir plus sur le Club &rarr;
+							</button>
+						</div>
+					</div>
+					<div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-ocobo-primary/5 to-transparent pointer-events-none"></div>
+				</div>
+
+				<div className="container mx-auto px-6 space-y-32">
+					{/* Ambiance */}
+					<section className="scroll-mt-32">
+						<div className="flex flex-col lg:flex-row gap-20 items-center">
+							<div className="lg:w-1/2 rounded-[3rem] overflow-hidden shadow-xl">
+								<img
+									src="/images/hoxton-paris.jpg"
+									alt="The Hoxton Paris"
+									className="w-full h-full object-cover"
+								/>
+							</div>
+							<div className="lg:w-1/2">
+								<p className="text-[10px] font-black uppercase tracking-[0.4em] text-ocobo-primary mb-6">
+									Le format
+								</p>
+								<h2 className="text-4xl font-extrabold text-slate-900 mb-8 tracking-tighter">
+									Intimiste, sur invitation.
+								</h2>
+								<p className="text-slate-500 text-lg leading-relaxed mb-6">
+									Le Dîner MRC, c'est un format différent. Pas de conférence, pas d'agenda chargé. Une table, une quinzaine de profils soigneusement choisis et une soirée pour échanger librement sur les sujets qui font avancer le Revenue.
+								</p>
+								<p className="text-slate-500 text-lg leading-relaxed">
+									Au coeur du 2ème, dans les salons du Hoxton Paris.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					{/* CTA */}
+					<section className="text-center py-20 bg-slate-900 rounded-[4rem] text-white overflow-hidden relative">
+						<div className="relative z-10 px-6">
+							<p className="text-ocobo-primary font-black text-xs uppercase tracking-widest mb-6">Places limitées</p>
+							<h3 className="text-3xl md:text-5xl font-extrabold mb-8 tracking-tighter">
+								Participer au prochain dîner
+							</h3>
+							<p className="text-slate-400 text-lg mb-12 max-w-xl mx-auto">
+								Le format est sur invitation. Laissez-nous vos coordonnées et nous reviendrons vers vous si votre profil correspond à nos prochaines sessions.
+							</p>
+							<button
+								onClick={onJoinClick}
+								className="px-12 py-6 bg-ocobo-primary text-white rounded-full font-black uppercase tracking-widest text-xs shadow-2xl hover:bg-white hover:text-slate-900 transition-all transform hover:-translate-y-1"
+							>
+								Rejoindre la liste d'attente
+							</button>
+						</div>
+						<div className="absolute top-0 right-0 w-64 h-64 bg-ocobo-primary/20 blur-[100px] rounded-full"></div>
+						<div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full"></div>
+					</section>
+				</div>
+			</div>
+		);
+	}
+
 	if (eventId !== "rf2026") {
 		return (
 			<div className="container mx-auto px-6 py-40 text-center">

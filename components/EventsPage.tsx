@@ -7,6 +7,14 @@ interface EventsPageProps {
 
 const events = [
   {
+    id: 'diner-mrc-juillet-2026',
+    title: 'Dîner MRC',
+    date: '21 Juillet 2026',
+    location: 'The Hoxton, Paris',
+    image: '/images/hoxton-paris.jpg',
+    tag: 'À venir'
+  },
+  {
     id: 'rf2026',
     title: 'Revenue Forward 2026',
     date: '12 Février 2026',
@@ -45,7 +53,7 @@ const EventsPage: React.FC<EventsPageProps> = ({ onSelectEvent }) => {
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">{event.title}</h3>
                 <p className="text-slate-500 text-sm mb-8 font-medium">{event.location}</p>
                 <button className="text-slate-900 font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
-                  Consulter le compte-rendu <span>→</span>
+                  {event.tag === 'À venir' ? 'En savoir plus' : 'Consulter le compte-rendu'} <span>→</span>
                 </button>
               </div>
             </div>
