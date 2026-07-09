@@ -63,10 +63,13 @@ const EventDetail: React.FC<EventDetailProps> = ({
 									Le format
 								</p>
 								<h2 className="text-4xl font-extrabold text-slate-900 mb-8 tracking-tighter">
-									Intimiste, sur invitation.
+									Le MRC passe à table.
 								</h2>
 								<p className="text-slate-500 text-lg leading-relaxed mb-6">
 									Le Dîner MRC, c'est un format différent. Pas de conférence, pas d'agenda chargé. Une table, une quinzaine de profils soigneusement choisis et une soirée pour échanger librement sur les sujets qui font avancer le Revenue.
+								</p>
+								<p className="text-slate-500 text-lg leading-relaxed mb-6">
+									Nous organisons régulièrement ces dîners entre Revenue Operators, dans un cadre convivial propice aux échanges francs entre pairs.
 								</p>
 								<p className="text-slate-500 text-lg leading-relaxed">
 									Au coeur du 2ème, dans les salons du Hoxton Paris.
