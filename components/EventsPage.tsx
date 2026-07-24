@@ -19,7 +19,7 @@ const events = [
     title: 'Revenue Forward 2026',
     date: '12 Février 2026',
     location: 'Morning Bourse, Paris',
-    image: 'https://27107933.fs1.hubspotusercontent-eu1.net/hubfs/27107933/Morning%20Bourse.avif',
+    image: '/images/act-1-01.jpg',
     tag: 'Passé'
   }
 ];
