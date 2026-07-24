@@ -27,14 +27,14 @@ const EventDetail: React.FC<EventDetailProps> = ({
 							<span>←</span> Retour aux événements
 						</button>
 						<div className="max-w-4xl">
-							<div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-ocobo-primary text-white text-[10px] font-black uppercase tracking-[0.2em]">
-								À venir · 21 Juillet 2026
+							<div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-slate-900 text-white text-[10px] font-black uppercase tracking-[0.2em]">
+								Évènement Terminé · 21 Juillet 2026
 							</div>
 							<h1 className="text-6xl md:text-8xl font-extrabold text-slate-900 mb-6 tracking-tighter leading-none">
 								Dîner MRC
 							</h1>
 							<p className="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed max-w-3xl mb-4">
-								Un dîner intimiste réunissant un cercle restreint de leaders du Revenue.
+								Le 21 juillet 2026, quinze leaders du Revenue se sont retrouvés autour d'une même table, au Hoxton Paris.
 							</p>
 							<button
 								onClick={onHome}
@@ -48,9 +48,27 @@ const EventDetail: React.FC<EventDetailProps> = ({
 				</div>
 
 				<div className="container mx-auto px-6 space-y-32">
-					{/* Ambiance */}
-					<section className="scroll-mt-32">
+					{/* Concepts */}
+					<section id="insights" className="scroll-mt-32">
 						<div className="flex flex-col lg:flex-row gap-20 items-center">
+							<div className="lg:w-1/2">
+								<h2 className="text-4xl font-extrabold text-slate-900 mb-8 tracking-tighter">
+									Concept
+								</h2>
+								<p className="text-slate-500 text-lg leading-relaxed mb-6">
+									Le Modern Revenue Club réunit, autour d'une même table, des gens qui font vraiment du Revenue. Pas qui en parlent.
+								</p>
+								<p className="text-slate-500 text-lg leading-relaxed mb-6">
+									Format intimiste : un dîner d'une quinzaine de personnes, un thème unique et une règle simple. On partage notre réalité, ce qui marche et ce qui coince, entre pairs qui vivent les mêmes questions.
+								</p>
+								<p className="text-slate-500 text-lg leading-relaxed mb-6">
+									Le dîner #2 avait pour thème <strong className="text-slate-900 font-bold">l'IA appliquée au Revenue</strong> : où en est chacun, ce qui fonctionne, les problèmes identifiés, le niveau de maturité. Un apéritif informel pour lancer les échanges, puis des conversations qui suivent naturellement.
+								</p>
+								<p className="text-slate-500 text-lg leading-relaxed">
+									L'objectif : repartir en y voyant un peu plus clair, et rester en lien.
+								</p>
+							</div>
+
 							<div className="lg:w-1/2 rounded-[3rem] overflow-hidden shadow-xl">
 								<img
 									src="/images/hoxton-paris.jpg"
@@ -58,41 +76,75 @@ const EventDetail: React.FC<EventDetailProps> = ({
 									className="w-full h-full object-cover"
 								/>
 							</div>
-							<div className="lg:w-1/2">
-								<p className="text-[10px] font-black uppercase tracking-[0.4em] text-ocobo-primary mb-6">
-									Le format
-								</p>
-								<h2 className="text-4xl font-extrabold text-slate-900 mb-8 tracking-tighter">
-									Le MRC passe à table.
-								</h2>
-								<p className="text-slate-500 text-lg leading-relaxed mb-6">
-									Le Dîner MRC, c'est un format différent. Pas de conférence, pas d'agenda chargé. Une table, une quinzaine de profils soigneusement choisis et une soirée pour échanger librement sur les sujets qui font avancer le Revenue.
-								</p>
-								<p className="text-slate-500 text-lg leading-relaxed mb-6">
-									Nous organisons régulièrement ces dîners entre Revenue Operators, dans un cadre convivial propice aux échanges francs entre pairs.
-								</p>
-								<p className="text-slate-500 text-lg leading-relaxed">
-									Au coeur du 2ème, dans les salons du Hoxton Paris.
-								</p>
+						</div>
+					</section>
+
+					{/* Gallery Section */}
+					<section id="gallery" className="py-20 border-t border-slate-100">
+						<div className="mb-12">
+							<p className="text-[10px] font-black uppercase tracking-[0.4em] text-ocobo-primary mb-4">
+								L'atmosphère du Club
+							</p>
+							<h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tighter">
+								L'évènement en images
+							</h2>
+						</div>
+
+						<div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[700px]">
+							<div className="relative md:col-span-7 md:row-span-1 min-h-[300px] rounded-[3rem] overflow-hidden group shadow-lg">
+								<img
+									src="/images/diner-mrc-juillet-2026/diner-3.jpg"
+									alt="La table du Dîner MRC au complet"
+									className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+								/>
+							</div>
+							<div className="md:col-span-5 md:row-span-1 grid grid-rows-2 gap-6 min-h-[300px]">
+								<div className="relative rounded-[3rem] overflow-hidden group shadow-lg">
+									<img
+										src="/images/diner-mrc-juillet-2026/diner-1.jpg"
+										alt="Échanges dans la cour du Hoxton Paris"
+										className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+									/>
+								</div>
+								<div className="relative rounded-[3rem] overflow-hidden group shadow-lg">
+									<img
+										src="/images/diner-mrc-juillet-2026/diner-2.jpg"
+										alt="Cocktail avant le dîner"
+										className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+									/>
+								</div>
 							</div>
 						</div>
 					</section>
 
-					{/* CTA */}
+					{/* Location */}
+					<div className="border-t border-slate-200/50 pt-20">
+						<Location
+							venueName="The Hoxton, Paris"
+							imageUrl="/images/hoxton-paris.jpg"
+							imageAlt="The Hoxton Paris"
+							description="Au cœur du 2ème arrondissement, le Hoxton Paris nous a accueillis dans ses salons pour une soirée intimiste entre leaders du Revenue."
+							address={"30-32 Rue du Sentier\n75002 Paris"}
+							dateTime={"21 Juillet 2026\nSoirée"}
+							mapsUrl="https://www.google.com/maps/search/?api=1&query=The+Hoxton+Paris"
+						/>
+					</div>
+
+					{/* Bottom CTA for next events */}
 					<section className="text-center py-20 bg-slate-900 rounded-[4rem] text-white overflow-hidden relative">
 						<div className="relative z-10 px-6">
-							<p className="text-ocobo-primary font-black text-xs uppercase tracking-widest mb-6">Places limitées</p>
 							<h3 className="text-3xl md:text-5xl font-extrabold mb-8 tracking-tighter">
-								Participer au prochain dîner
+								Vous avez manqué cet événement ?
 							</h3>
 							<p className="text-slate-400 text-lg mb-12 max-w-xl mx-auto">
-								Le format est sur invitation. Laissez-nous vos coordonnées et nous reviendrons vers vous si votre profil correspond à nos prochaines sessions.
+								Le club organise régulièrement des rencontres de ce format.
+								Rejoingnez pour être informé des prochaines sessions.
 							</p>
 							<button
-								onClick={onJoinClick}
+								onClick={onBack}
 								className="px-12 py-6 bg-ocobo-primary text-white rounded-full font-black uppercase tracking-widest text-xs shadow-2xl hover:bg-white hover:text-slate-900 transition-all transform hover:-translate-y-1"
 							>
-								Rejoindre la liste d'attente
+								Découvrir tous nos évènements
 							</button>
 						</div>
 						<div className="absolute top-0 right-0 w-64 h-64 bg-ocobo-primary/20 blur-[100px] rounded-full"></div>

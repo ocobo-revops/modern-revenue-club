@@ -11,8 +11,8 @@ const events = [
     title: 'Dîner MRC',
     date: '21 Juillet 2026',
     location: 'The Hoxton, Paris',
-    image: '/images/hoxton-paris.jpg',
-    tag: 'À venir'
+    image: '/images/diner-mrc-juillet-2026/diner-3.jpg',
+    tag: 'Passé'
   },
   {
     id: 'rf2026',

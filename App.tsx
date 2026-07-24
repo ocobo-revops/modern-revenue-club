@@ -94,7 +94,7 @@ const App: React.FC = () => {
           
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => navigateTo('home')} className={`text-[10px] font-black uppercase tracking-widest ${currentPage === 'home' ? 'text-ocobo-primary' : 'text-slate-900'}`}>Le Club</button>
-            
+
             {user && (
               <>
                 <button onClick={() => navigateTo('network')} className={`text-[10px] font-black uppercase tracking-widest ${currentPage === 'network' ? 'text-ocobo-primary' : 'text-slate-900'}`}>Network</button>
