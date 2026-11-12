@@ -9,6 +9,7 @@ interface LocationProps {
   address?: string;
   dateTime?: string;
   mapsUrl?: string;
+  stacked?: boolean;
 }
 
 const Location: React.FC<LocationProps> = ({
@@ -19,6 +20,7 @@ const Location: React.FC<LocationProps> = ({
   address = '4 Pl. de la Bourse\n75002 Paris',
   dateTime = '12 Fév 2026\nÀ partir de 19h00',
   mapsUrl = 'https://maps.app.goo.gl/oC8f79GkaKof4rjv9',
+  stacked = false,
 }) => {
   return (
     <section id="location" className="py-24">
@@ -44,7 +46,7 @@ const Location: React.FC<LocationProps> = ({
               <div className="space-y-8 text-lg text-slate-600 leading-relaxed">
                 <p>{description}</p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className={`grid grid-cols-1 ${stacked ? 'gap-2' : 'sm:grid-cols-2 gap-6'}`}>
                   <div className="flex items-start gap-4 p-4 bg-white/50 rounded-2xl border border-white">
                     <div className="bg-orange-50 p-2 rounded-xl text-ocobo-primary">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

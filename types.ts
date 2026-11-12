@@ -10,9 +10,10 @@ export interface Speaker {
   name: string;
   role: string;
   company: string;
-  companyLogoUrl: string;
+  companyLogoUrl?: string;
   imageUrl: string;
   linkedinUrl?: string;
+  badge?: string;
 }
 
 export interface AgendaItem {
