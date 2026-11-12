@@ -2,7 +2,7 @@
 import React from 'react';
 import { Speaker } from '../types';
 
-const speakers: Speaker[] = [
+const defaultSpeakers: Speaker[] = [
   {
     id: 1,
     name: "Benjamin Boileux",
@@ -41,7 +41,24 @@ const speakers: Speaker[] = [
   }
 ];
 
-const Speakers: React.FC = () => {
+interface SpeakersProps {
+  speakers?: Speaker[];
+  title?: string;
+  subtitle?: string;
+}
+
+const Speakers: React.FC<SpeakersProps> = ({
+  speakers = defaultSpeakers,
+  title = 'Les voix du Revenue Forward',
+  subtitle = 'Rencontrez les leaders qui façonnent les stratégies de croissance des plus belles entreprises de la French Tech.',
+}) => {
+  const gridCols =
+    speakers.length === 5
+      ? 'lg:grid-cols-3 xl:grid-cols-5'
+      : speakers.length === 3
+        ? 'lg:grid-cols-3'
+        : 'lg:grid-cols-4';
+
   return (
     <section id="speakers" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -49,21 +66,28 @@ const Speakers: React.FC = () => {
           <div className="inline-block mb-4 px-3 py-1 rounded-full bg-ocobo-primary/10 border border-ocobo-primary/20">
             <span className="text-ocobo-primary text-xs font-bold uppercase tracking-widest">Intervenants</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">Les voix du Revenue Forward</h2>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Rencontrez les leaders qui façonnent les stratégies de croissance des plus belles entreprises de la French Tech.
-          </p>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">{title}</h2>
+          {subtitle && (
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">{subtitle}</p>
+          )}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {speakers.map((speaker) => (
-            <a 
-              key={speaker.id} 
-              href={speaker.linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+        <div className={`grid grid-cols-1 sm:grid-cols-2 ${gridCols} gap-8`}>
+          {speakers.map((speaker) => {
+            const Wrapper = speaker.linkedinUrl ? 'a' : 'div';
+            const linkProps = speaker.linkedinUrl
+              ? {
+                  href: speaker.linkedinUrl,
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                  'aria-label': `Voir le profil LinkedIn de ${speaker.name}`,
+                }
+              : {};
+            return (
+            <Wrapper
+              key={speaker.id}
+              {...linkProps}
               className="group relative block focus:outline-none focus:ring-2 focus:ring-ocobo-primary focus:ring-offset-4 rounded-[2.5rem]"
-              aria-label={`Voir le profil LinkedIn de ${speaker.name}`}
             >
               <div className="relative rounded-[2.5rem] overflow-hidden bg-white/40 border border-white/60 backdrop-blur-md shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full">
                 {/* Image Container */}
@@ -78,6 +102,11 @@ const Speakers: React.FC = () => {
                 
                 {/* Content */}
                 <div className="p-8 text-center flex flex-col items-center">
+                  {speaker.badge && (
+                    <span className="mb-3 px-3 py-1 rounded-full bg-ocobo-primary/10 text-ocobo-primary text-[9px] font-black uppercase tracking-widest">
+                      {speaker.badge}
+                    </span>
+                  )}
                   <h3 className="text-xl font-bold text-slate-900 mb-1">{speaker.name}</h3>
                   <p className="text-ocobo-primary font-semibold text-sm mb-4">{speaker.role}</p>
                   
@@ -89,12 +118,13 @@ const Speakers: React.FC = () => {
                         alt={speaker.company} 
                         className="max-h-full w-auto max-w-[120px] object-contain opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
                       />
-                    ) : (
-                      <span className="text-slate-400 text-[10px] uppercase tracking-widest font-bold">Logo {speaker.company}</span>
-                    )}
+                    ) : speaker.company ? (
+                      <span className="text-slate-400 text-[10px] uppercase tracking-widest font-bold">{speaker.company}</span>
+                    ) : null}
                   </div>
-                  
+
                   {/* LinkedIn Icon - Always visible on mobile, hover effect on desktop */}
+                  {speaker.linkedinUrl && (
                   <div className="mt-4 flex justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500">
                     <div className="p-2.5 bg-slate-100 group-hover:bg-ocobo-primary group-hover:text-white rounded-full transition-all shadow-sm group-hover:shadow-md text-slate-600">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -102,10 +132,12 @@ const Speakers: React.FC = () => {
                       </svg>
                     </div>
                   </div>
+                  )}
                 </div>
               </div>
-            </a>
-          ))}
+            </Wrapper>
+            );
+          })}
         </div>
       </div>
     </section>

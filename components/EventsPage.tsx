@@ -7,6 +7,14 @@ interface EventsPageProps {
 
 const events = [
   {
+    id: 'up-bordeaux-novembre-2026',
+    title: 'Orchestrer en 2027 les équipes qui génèrent la croissance',
+    date: '26 Novembre 2026',
+    location: 'Locomotiv, Bordeaux',
+    image: '/images/up-bordeaux-novembre-2026/visuel.jpg',
+    tag: 'À venir'
+  },
+  {
     id: 'diner-mrc-juillet-2026',
     title: 'Dîner MRC',
     date: '21 Juillet 2026',
